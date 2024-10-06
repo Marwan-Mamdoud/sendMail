@@ -37,7 +37,7 @@ app.post("/api/sendMail", async (req, res, next) => {
         name: `${name}`,
         address: `${email}`,
       },
-      to: "marwanmamdouh159@gmail.com",
+      to: "ibrahimyounes646@gmail.com",
       subject: "New Booking",
       text: "Done",
       html: `<b>name: ${name}</b><br/><b>email: ${email}</b><br/> <b>phone: ${phone}</b><br/><b>Number of Rooms: ${rooms}</b><br/><b>Name of State: ${state}</b><br/><b>Message: ${message}</b><br/>`,
