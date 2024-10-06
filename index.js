@@ -37,10 +37,11 @@ app.post("/api/sendMail", async (req, res, next) => {
         name: `${name}`,
         address: `${email}`,
       },
-      to: "ibrahimyounes646@gmail.com",
-      subject: "New Booking",
-      text: "Done",
-      html: `<b>name: ${name}</b><br/><b>email: ${email}</b><br/> <b>phone: ${phone}</b><br/><b>Number of Rooms: ${rooms}</b><br/><b>Name of State: ${state}</b><br/><b>Message: ${message}</b><br/>`,
+      // to: "ibrahimyounes646@gmail.com",
+      to: "marwanmamdouh159@gmail.com",
+      subject: "real estate website",
+      text: "You just got a form submission!",
+      html: `<br/><p>You just got a form submission!</p><br/><br/><b>Form</b><br/><p>Booking From</p><br/><br/><b>Site</b><br/><p>Real State Site</p><br/><br/><b>Submitted content</b> <br/><b>name: ${name}</b><br/><b>email: ${email}</b><br/> <b>phone: ${phone}</b><br/><b>Number of Rooms: ${rooms}</b><br/><b>Name of State: ${state}</b><br/><b>Message: ${message}</b><br/>`,
     };
     await transport.sendMail(mailOption);
     console.log("done");
