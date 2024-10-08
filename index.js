@@ -44,7 +44,7 @@ app.post("/api/sendMail", async (req, res, next) => {
     });
     const mailOption = {
       from: {
-        name: `${name}`,
+        name: `Real State`,
         address: `${email}`,
       },
       to: "ibrahimyounes646@gmail.com",
