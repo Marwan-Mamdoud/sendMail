@@ -22,7 +22,7 @@ app.post("/api/sendMail", async (req, res, next) => {
   try {
     const { name, phone, startDate, endDate, occasion, rooms, people } =
       req.body;
-    console.log({ name, email, phone, rooms, state, message });
+    // console.log({ name, email, phone, rooms, state, message });
     const transport = nodemailer.createTransport({
       service: "gmail",
       host: "smtp.gmail.com",
@@ -36,7 +36,7 @@ app.post("/api/sendMail", async (req, res, next) => {
     const mailOption = {
       from: {
         name: `${name}`,
-        address: `${email}`,
+        address: `marwanmamdouh159@gmail.com`,
       },
       // to: "ibrahimyounes646@gmail.com",
       to: "marwanmamdouh159@gmail.com",
@@ -49,5 +49,6 @@ app.post("/api/sendMail", async (req, res, next) => {
     return res.status(200).json({ message: "Done Send mail" });
   } catch (error) {
     console.log(error.message);
+    return res.status(400).json({ error: error.message });
   }
 });
